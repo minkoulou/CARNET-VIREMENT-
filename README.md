@@ -1,4 +1,5 @@
-![Logo CARNET-VIREMENT](public/logo.svg)
+<img src='public/logo.svg'  width="600" alt='LOGO DU CARNET DE VIREMENT'/>
+
 # Carnet de versements
 
 React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, confirmation de réception et historique non modifiable.
