@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Remplacez par les adresses de Benoit et Brice (en minuscules, comme dans .env)
+    function mail() { return request.auth.token.email.lower(); }
+    function allowed() {
+      return request.auth != null
+        && mail() in ['benoit@carnet.app', 'brice@carnet.app'];
+    }
+
+    match /transfers/{id} {
+      // Les deux voient tout
+      allow read: if allowed();
+
+      allow create: if allowed()
+        && request.resource.data.createdBy == mail()
+        && request.resource.data.amount is number
+        && request.resource.data.amount > 0
+        && request.resource.data.type in ['versement', 'retrait'];
+
+      // Seul l'auteur modifie sa saisie ; le récepteur peut seulement confirmer un versement
+      allow update: if allowed() && (
+        (resource.data.createdBy == mail()
+          && request.resource.data.createdBy == resource.data.createdBy)
+        || (resource.data.type == 'versement'
+          && resource.data.receiverEmail == mail()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'confirmedAt'])
+          && request.resource.data.status == 'confirmed'));
+
+      allow delete: if allowed() && resource.data.createdBy == mail();
+    }
+
+    // Journal : visible par les deux, jamais modifiable ni supprimable
+    match /journal/{id} {
+      allow read, create: if allowed();
+      allow update, delete: if false;
+    }
+
+    match /{document=**} { allow read, write: if false; }
+  }
+}
