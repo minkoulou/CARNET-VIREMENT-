@@ -50,8 +50,8 @@ export default function App() {
 
   const env = import.meta.env
   if (!env.VITE_FIREBASE_API_KEY || !env.VITE_FIREBASE_PROJECT_ID || !env.VITE_USER1_EMAIL || !env.VITE_USER2_EMAIL)
-    return <div className="splash"><p style={{ maxWidth: 420, textAlign: 'center', padding: 24 }}><b>Configuration manquante.</b><br />Le fichier <code>.env</code> est absent ou incomplet (ou les variables <code>VITE_*</code> ne sont pas définies sur l’hébergeur). Remplissez-le puis relancez / redéployez.</p></div>
-  if (user === undefined) return <div className="splash"><span className="spin big" /></div>
+    return <div className="grid min-h-screen place-items-center"><p style={{ maxWidth: 420, textAlign: 'center', padding: 24 }}><b>Configuration manquante.</b><br />Le fichier <code>.env</code> est absent ou incomplet (ou les variables <code>VITE_*</code> ne sont pas définies sur l’hébergeur). Remplissez-le puis relancez / redéployez.</p></div>
+  if (user === undefined) return <div className="grid min-h-screen place-items-center"><span className="size-9 animate-spin rounded-full border-[3px] border-line border-t-brand" /></div>
   if (!me) return <Login people={PEOPLE} onLogin={login} busy={busy} error={err} />
 
   const journal = what => addDoc(collection(db, 'journal'), { who: me.name, what, at: Date.now() })
