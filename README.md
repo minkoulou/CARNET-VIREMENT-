@@ -15,10 +15,10 @@ React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, 
 
 ## Fonctionnalités
 
- -Connexion avec mot de pass .
- -Consulter les différentes transactions(retraits,virement...).
- -Ajout d'une opération(transaction).
- -Consulter l'historique des transactions.
+ - Connexion avec mot de pass .
+ - Consulter les différentes transactions(retraits,virement...).
+ - Ajout d'une opération(transaction).
+ - Consulter l'historique des transactions.
 
 ## Technologies utilisées
 
@@ -28,8 +28,8 @@ React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, 
 
 ## Prérequis
 
- -Nodejs (version > 22.x.x)
- -compte Firebase
+ - Nodejs (version > 22.x.x)
+ - compte Firebase
 
 ## Installation
 
@@ -39,50 +39,53 @@ React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, 
 
  ## Variable d'environement
 
-  VITE_FIREBASE_API_KEY=.........................
-  VITE_FIREBASE_AUTH_DOMAIN=.........................
-  VITE_FIREBASE_PROJECT_ID=.........................
-  VITE_FIREBASE_APP_ID=1:.........................
-  VITE_USER1_NAME=.........................
-  VITE_USER1_EMAIL=.........................
-  VITE_USER2_NAME=.........................
-  VITE_USER2_EMAIL=.........................
+  - VITE_FIREBASE_API_KEY=.........................
+  - VITE_FIREBASE_AUTH_DOMAIN=.........................
+  - VITE_FIREBASE_PROJECT_ID=.........................
+  - VITE_FIREBASE_APP_ID=1:.........................
+  - VITE_USER1_NAME=.........................
+  - VITE_USER1_EMAIL=.........................
+  - VITE_USER2_NAME=.........................
+  - VITE_USER2_EMAIL=.........................
 
 ## structure du  projet 
 
-CARNET-versements/
-   node_modules
-   public/
-         |__logo.svg
-    src/
-       |__App.jsx
-       |__config.js  
-       |__firebase.js
-       |__Ledger.jsx
-       |__main.jsx
-       |__style.css
-    .env
-    .gitignore
-    firestore.rules
-    index.html
-    package-lock.json
-    package.json
-    README.md
+- CARNET-versements/
+   - node_modules
+   - public/
+        - |__logo.svg
+    - src/
+      - |__App.jsx
+      - |__config.js  
+      - |__firebase.js
+      - |__Ledger.jsx
+      - |__main.jsx
+      - |__style.css
+    - .env
+    - .gitignore
+    - firestore.rules
+    - index.html
+    - package-lock.json
+    - package.json
+    - README.md
+    - 
     vite.config.js
 
 ## Utilisation
-  npm run dev 
-  npm run built        //pour contruire la mise en ligne
+  - npm run dev 
+  - npm run built        //pour contruire la mise en ligne
 
 ## Déploiement
 
- *Vercel
- *Netlify
+ - Vercel
+ - Netlify
 
  ## Contact
 
   tel: +237 659 09 29 53 / +237 652 37 41 38
+
   whatsapp: +237 687 11 83 30 /
+  
   email:minkouloubenoit431@gmail.com
   
 Gardez vos mots de passe pour vous : changez-les dans la console Firebase si l'un d'eux est découvert.
