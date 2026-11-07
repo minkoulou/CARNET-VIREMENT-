@@ -1,4 +1,4 @@
-<img src='public/logo.svg'  width="600" alt='LOGO DU CARNET DE VIREMENT'/>
+<img src='public/logo.svg'  width="300" alt='LOGO DU CARNET DE VIREMENT'/>
 
 # Carnet de versements
 
