@@ -68,8 +68,7 @@ React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, 
     - package-lock.json
     - package.json
     - README.md
-    - 
-    vite.config.js
+    - vite.config.js
 
 ## Utilisation
   - npm run dev 
@@ -85,7 +84,7 @@ React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, 
   tel: +237 659 09 29 53 / +237 652 37 41 38
 
   whatsapp: +237 687 11 83 30 /
-  
+
   email:minkouloubenoit431@gmail.com
   
 Gardez vos mots de passe pour vous : changez-les dans la console Firebase si l'un d'eux est découvert.
