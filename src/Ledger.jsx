@@ -132,7 +132,9 @@ function Modal({ title, onClose, children }) {
     document.body.style.overflow = 'hidden'
     return () => { window.removeEventListener('keydown', k); document.body.style.overflow = '' }
   }, [onClose])
+  
   return (
+
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}
       className="fixed inset-0 z-50 grid place-items-center bg-[#080e1e]/55 p-4 backdrop-blur-sm max-sm:items-end max-sm:p-0"
       onMouseDown={e => e.target === e.currentTarget && onClose()}>

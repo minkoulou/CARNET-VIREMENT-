@@ -70,6 +70,7 @@
     }
 
     @keyframes ring {
+        
         from {
             opacity: .7;
             transform: scale(1)
