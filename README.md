@@ -72,7 +72,7 @@ React (Vite) + Firebase. Benoit garde l'argent de Brice : versements, retraits, 
 
 ## Utilisation
   - npm run dev 
-  - npm run built        //pour contruire la mise en ligne
+  - npm run built   
 
 ## Déploiement
 
